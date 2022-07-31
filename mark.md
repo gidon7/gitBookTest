@@ -138,43 +138,6 @@
 ## 2.4. 코드
 4개의 공백 또는 하나의 탭으로 들여쓰기를 만나면 변환되기 시작하여 들여쓰지 않은 행을 만날때까지 변환이 계속된다.
 
-### 2.4.1. 들여쓰기
-```
-This is a normal paragraph:
-
-    This is a code block.
-    
-end code block.
-```
-
-실제로 적용해보면,
-
-적용예:
-
-*****
-This is a normal paragraph:
-
-    This is a code block.
-
-end code block.
-*****
-
-> 한줄 띄어쓰지 않으면 인식이 제대로 안되는 문제가 발생합니다.
-
-```
-This is a normal paragraph:
-    This is a code block.
-end code block.
-```
-
-적용예:
-
-*****
-This is a normal paragraph:
-    This is a code block.
-end code block.
-*****
-
 ### 2.4.1. 코드블럭
 코드블럭은 다음과 같이 2가지 방식을 사용할 수 있습니다:
 
