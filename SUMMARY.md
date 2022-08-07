@@ -4,3 +4,4 @@
 * [test](test.md)
 * [MarkDown](mark.md)
 * [swap](swap.md)
+* [vi](vi.md)
