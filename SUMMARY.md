@@ -5,3 +5,5 @@
 * [MarkDown](mark.md)
 * [swap](swap.md)
 * [vi](vi.md)
+* [yum](yum.md)
+
