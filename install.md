@@ -4,7 +4,11 @@
 
 	yum -y update
 
-## 2. epel 설치
+## 2. Apache 설치
+
+	sudo yum -y install httpd
+
+## 3. epel 설치
 	cat /etc/os-release
 
 	sudo amazon-linux-extras install epel -y
@@ -14,7 +18,7 @@
 	sudo systemctl status httpd
 
 
-## 3. jdk 설치
+## 4. jdk 설치
 
 	yum list | grep jdk
 
@@ -32,7 +36,7 @@
 	/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.332.b09-1.amzn2.0.2.x86_64/jre/bin/java
 	
 
-## 4. MySql 설치
+## 5. MySql 설치
 
 	sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
 
@@ -49,7 +53,7 @@
 
 
 
-## 5. resin 설치
+## 6. resin 설치
 
 caucho.com 에서 rpm 파일을 다운받은 뒤 설치한다.
 
@@ -60,10 +64,12 @@ pro 버전의 경우 아래와 같이 설치할 수 있다.
 	yum install http://caucho.com/download/rpm/4.0.30/x86_64/resin-pro-4.0.30-1.x86_64.rpm
 
 
-## 6. PHP 설치
+## 7. PHP 설치
 
 	yum list php
 	sudo yum -y install php.x86_64
+
+
 
 
 ### * 확인
