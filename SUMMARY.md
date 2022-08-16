@@ -6,4 +6,5 @@
 * [swap](swap.md)
 * [vi](vi.md)
 * [yum](yum.md)
+* [install](install.md)
 

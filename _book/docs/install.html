@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>swap · GitBook</title>
+        <title>install · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="vi.html" />
     
-    
-    <link rel="prev" href="mark.html" />
+    <link rel="prev" href="yum.html" />
     
 
     </head>
@@ -128,7 +126,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4" data-path="swap.html">
+        <li class="chapter " data-level="1.4" data-path="swap.html">
             
                 <a href="swap.html">
             
@@ -167,7 +165,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="install.html">
+        <li class="chapter active" data-level="1.7" data-path="install.html">
             
                 <a href="install.html">
             
@@ -210,7 +208,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >swap</a>
+        <a href="." >install</a>
     </h1>
 </div>
 
@@ -225,24 +223,59 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="aws-swap-&#xC124;&#xC815;">AWS SWAP &#xC124;&#xC815;</h1>
-<h2 id="1-dd-&#xBA85;&#xB839;&#xC744;-&#xC0AC;&#xC6A9;&#xD558;&#xC5EC;-&#xB8E8;&#xD2B8;-&#xD30C;&#xC77C;-&#xC2DC;&#xC2A4;&#xD15C;&#xC5D0;-&#xC2A4;&#xC651;-&#xD30C;&#xC77C;&#xC744;-&#xC0DD;&#xC131;&#xD569;&#xB2C8;&#xB2E4;">1. dd &#xBA85;&#xB839;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xB8E8;&#xD2B8; &#xD30C;&#xC77C; &#xC2DC;&#xC2A4;&#xD15C;&#xC5D0; &#xC2A4;&#xC651; &#xD30C;&#xC77C;&#xC744; &#xC0DD;&#xC131;&#xD569;&#xB2C8;&#xB2E4;.</h2>
-<h3 id="dd-&#xBA85;&#xB839;&#xC5D0;&#xC11C;-&#xC2A4;&#xC651;-&#xD30C;&#xC77C;&#xC740;-4gb128mb-x-32&#xC785;&#xB2C8;&#xB2E4;">dd &#xBA85;&#xB839;&#xC5D0;&#xC11C; &#xC2A4;&#xC651; &#xD30C;&#xC77C;&#xC740; 4GB(128MB x 32)&#xC785;&#xB2C8;&#xB2E4;.</h3>
-<pre><code>$ sudo dd if=/dev/zero of=/swapfile bs=128M count=32 
-</code></pre><h2 id="2-&#xC2A4;&#xC651;-&#xD30C;&#xC77C;&#xC758;-&#xC77D;&#xAE30;-&#xBC0F;-&#xC4F0;&#xAE30;-&#xAD8C;&#xD55C;&#xC744;-&#xC5C5;&#xB370;&#xC774;&#xD2B8;-&#xD569;&#xB2C8;&#xB2E4;">2. &#xC2A4;&#xC651; &#xD30C;&#xC77C;&#xC758; &#xC77D;&#xAE30; &#xBC0F; &#xC4F0;&#xAE30; &#xAD8C;&#xD55C;&#xC744; &#xC5C5;&#xB370;&#xC774;&#xD2B8; &#xD569;&#xB2C8;&#xB2E4;.</h2>
-<pre><code>$ sudo chmod 600 /swapfile
-</code></pre><h2 id="3-linux-&#xC2A4;&#xC651;-&#xC601;&#xC5ED;&#xC744;-&#xC124;&#xC815;&#xD569;&#xB2C8;&#xB2E4;">3. Linux &#xC2A4;&#xC651; &#xC601;&#xC5ED;&#xC744; &#xC124;&#xC815;&#xD569;&#xB2C8;&#xB2E4;.</h2>
-<pre><code>$ sudo mkswap /swapfile
-</code></pre><h2 id="4-&#xC2A4;&#xC651;-&#xACF5;&#xAC04;&#xC5D0;-&#xC2A4;&#xC651;-&#xD30C;&#xC77C;&#xC744;-&#xCD94;&#xAC00;&#xD558;&#xC5EC;-&#xC2A4;&#xC651;-&#xD30C;&#xC77C;&#xC744;-&#xC989;&#xC2DC;-&#xC0AC;&#xC6A9;&#xD560;-&#xC218;-&#xC788;&#xB3C4;&#xB85D;-&#xD569;&#xB2C8;&#xB2E4;">4. &#xC2A4;&#xC651; &#xACF5;&#xAC04;&#xC5D0; &#xC2A4;&#xC651; &#xD30C;&#xC77C;&#xC744; &#xCD94;&#xAC00;&#xD558;&#xC5EC; &#xC2A4;&#xC651; &#xD30C;&#xC77C;&#xC744; &#xC989;&#xC2DC; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB3C4;&#xB85D; &#xD569;&#xB2C8;&#xB2E4;.</h2>
-<pre><code>$ sudo swapon /swapfile
-</code></pre><h2 id="5-&#xD504;&#xB85C;&#xC2DC;&#xC800;&#xAC00;-&#xC131;&#xACF5;&#xC801;&#xC778;&#xC9C0;-&#xD655;&#xC778;&#xD569;&#xB2C8;&#xB2E4;">5. &#xD504;&#xB85C;&#xC2DC;&#xC800;&#xAC00; &#xC131;&#xACF5;&#xC801;&#xC778;&#xC9C0; &#xD655;&#xC778;&#xD569;&#xB2C8;&#xB2E4;.</h2>
-<pre><code>$ sudo swapon -s
-</code></pre><h2 id="6-etcfstab-&#xD30C;&#xC77C;&#xC744;-&#xD3B8;&#xC9D1;&#xD558;&#xC5EC;-&#xBD80;&#xD305;-&#xC2DC;-&#xC2A4;&#xC651;-&#xD30C;&#xC77C;&#xC744;-&#xC2DC;&#xC791;&#xD569;&#xB2C8;&#xB2E4;">6. /etc/fstab &#xD30C;&#xC77C;&#xC744; &#xD3B8;&#xC9D1;&#xD558;&#xC5EC; &#xBD80;&#xD305; &#xC2DC; &#xC2A4;&#xC651; &#xD30C;&#xC77C;&#xC744; &#xC2DC;&#xC791;&#xD569;&#xB2C8;&#xB2E4;.</h2>
-<pre><code>$ sudo vi /etc/fstab
-</code></pre><h2 id="&#xD30C;&#xC77C;-&#xB05D;&#xC5D0;-&#xB2E4;&#xC74C;-&#xC904;&#xC744;-&#xC0C8;&#xB85C;-&#xCD94;&#xAC00;&#xD558;&#xACE0;-&#xD30C;&#xC77C;&#xC744;-&#xC800;&#xC7A5;&#xD55C;-&#xB2E4;&#xC74C;-&#xC885;&#xB8CC;&#xD569;&#xB2C8;&#xB2E4;">&#xD30C;&#xC77C; &#xB05D;&#xC5D0; &#xB2E4;&#xC74C; &#xC904;&#xC744; &#xC0C8;&#xB85C; &#xCD94;&#xAC00;&#xD558;&#xACE0; &#xD30C;&#xC77C;&#xC744; &#xC800;&#xC7A5;&#xD55C; &#xB2E4;&#xC74C; &#xC885;&#xB8CC;&#xD569;&#xB2C8;&#xB2E4;.</h2>
-<pre><code>/swapfile swap swap defaults 0 0
-</code></pre><h2 id="7-&#xBA54;&#xBAA8;&#xB9AC;-&#xD655;&#xC778;&#xC744;-&#xD569;&#xB2C8;&#xB2E4;">7. &#xBA54;&#xBAA8;&#xB9AC; &#xD655;&#xC778;&#xC744; &#xD569;&#xB2C8;&#xB2E4;.</h2>
-<pre><code>$ free -h
+                                <h1 id="yum-&#xC744;-&#xC774;&#xC6A9;&#xD574;&#xC11C;--epel-apache24-resin4-mysql57-php54-openjdk8-&#xC124;&#xCE58;&#xD558;&#xAE30;">yum &#xC744; &#xC774;&#xC6A9;&#xD574;&#xC11C;  epel, Apache2.4, Resin4, MySQL5.7, PHP5.4, OpenJDK8 &#xC124;&#xCE58;&#xD558;&#xAE30;</h1>
+<h2 id="1-&#xC5C5;&#xB370;&#xC774;&#xD2B8;">1. &#xC5C5;&#xB370;&#xC774;&#xD2B8;</h2>
+<pre><code>yum -y update
+</code></pre><h2 id="2-epel-&#xC124;&#xCE58;">2. epel &#xC124;&#xCE58;</h2>
+<pre><code>yum list epel-release
+
+sudo yum -y install epel-release.noarch
+sudo yum -y install httpd
+
+&#xC2E4;&#xD589; &#xBC0F; &#xD3EC;&#xD2B8;&#xC124;&#xC815;
+
+sudo systemctl start httpd
+sudo systemctl status httpd
+</code></pre><h2 id="3-jdk-&#xC124;&#xCE58;">3. jdk &#xC124;&#xCE58;</h2>
+<pre><code>yum list | grep jdk
+
+sudo yum -y install java-1.8.0-openjdk.x86_64
+
+sudo yum -y install java-1.8.0-openjdk-devel.x86_64
+
+
+&#xD658;&#xACBD;&#xBCC0;&#xC218; &#xC124;&#xC815;(&#xC7AC;&#xD655;&#xC778;)
+
+which java
+
+readlink -f /usr/bin/java
+
+/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.332.b09-1.amzn2.0.2.x86_64/jre/bin/java
+</code></pre><h2 id="4-mysql-&#xC124;&#xCE58;">4. MySql &#xC124;&#xCE58;</h2>
+<pre><code>sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
+
+sudo yum localinstall -y https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+
+sudo yum install -y mysql-community-server
+
+sudo systemctl enable mysqld
+sudo systemctl start mysqld
+
+mysql --version
+sudo netstat -plntu 
+sudo systemctl restart mysqld
+</code></pre><h2 id="5-resin-&#xC124;&#xCE58;">5. resin &#xC124;&#xCE58;</h2>
+<p>caucho.com &#xC5D0;&#xC11C; rpm &#xD30C;&#xC77C;&#xC744; &#xB2E4;&#xC6B4;&#xBC1B;&#xC740; &#xB4A4; &#xC124;&#xCE58;&#xD55C;&#xB2E4;.</p>
+<pre><code>yum install resin-4.0.63-1.x86_64.rpm
+</code></pre><p>pro &#xBC84;&#xC804;&#xC758; &#xACBD;&#xC6B0; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC774; &#xC124;&#xCE58;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<pre><code>rpm --import http://caucho.com/download/rpm/RPM-GPG-KEY-caucho
+yum install http://caucho.com/download/rpm/4.0.30/x86_64/resin-pro-4.0.30-1.x86_64.rpm
+</code></pre><h2 id="6-php-&#xC124;&#xCE58;">6. PHP &#xC124;&#xCE58;</h2>
+<pre><code>yum list php
+sudo yum -y install php.x86_64
+</code></pre><h3 id="&#xD655;&#xC778;">* &#xD655;&#xC778;</h3>
+<pre><code>yum repolist //&#xD604;&#xC7AC; &#xB4F1;&#xB85D;&#xB41C; repolist &#xD655;&#xC778;
+yum list installed //&#xC124;&#xCE58;&#xB41C; &#xC804;&#xCCB4; &#xD328;&#xD0A4;&#xC9C0;
 </code></pre>
                                 
                                 </section>
@@ -270,14 +303,10 @@
 
             
                 
-                <a href="mark.html" class="navigation navigation-prev " aria-label="Previous page: MarkDown">
+                <a href="yum.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: yum">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="vi.html" class="navigation navigation-next " aria-label="Next page: vi">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -286,7 +315,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"swap","level":"1.4","depth":1,"next":{"title":"vi","level":"1.5","depth":1,"path":"vi.md","ref":"vi.md","articles":[]},"previous":{"title":"MarkDown","level":"1.3","depth":1,"path":"mark.md","ref":"mark.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"swap.md","mtime":"2022-08-03T23:48:55.740Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-16T08:32:50.246Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"install","level":"1.7","depth":1,"previous":{"title":"yum","level":"1.6","depth":1,"path":"yum.md","ref":"yum.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"install.md","mtime":"2022-08-16T08:30:27.608Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-16T08:31:38.037Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
