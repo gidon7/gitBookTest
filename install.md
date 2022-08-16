@@ -5,14 +5,12 @@
 	yum -y update
 
 ## 2. epel 설치
-	yum list epel-release
+	cat /etc/os-release
 
-	sudo yum -y install epel-release.noarch
-	sudo yum -y install httpd
+	sudo amazon-linux-extras install epel -y
 
-	실행 및 포트설정
+	sudo systemctl starthttpd
 
-	sudo systemctl start httpd
 	sudo systemctl status httpd
 
 
@@ -73,3 +71,4 @@ pro 버전의 경우 아래와 같이 설치할 수 있다.
 	yum repolist //현재 등록된 repolist 확인
 	yum list installed //설치된 전체 패키지
 
+	
