@@ -23,13 +23,15 @@ virtual host 태그를 넣어 정의 합니다.
 AWS 에서 80 port에 대한 인바운드 보안 규칙을 설정합니다.
 ![이미지1](/img/그림2.png)
 
+
 Windows/System32/Drivers/etc/hosts 에 aws의 public ipv4 ip 주소와 donvhostest.com를 적어줍니다.
+![이미지2](/img/그림4.png)
 
 donvhostest.com 디렉터리에 간단한 html 화면을 만들어 줍니다.
 
 그 다음 접속 했을 때 화면은 아래의 그림 과 같습니다.
 
-![이미지2](/img/그림3.png)
+![이미지3](/img/그림3.png)
 
 왼쪽은 아이피 주소로 접속 했고, 오른쪽은 도메인 주소로 접속 했습니다.
 
