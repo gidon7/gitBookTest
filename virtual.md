@@ -25,7 +25,8 @@ AWS 에서 80 port에 대한 인바운드 보안 규칙을 설정합니다.
 
 
 Windows/System32/Drivers/etc/hosts 에 aws의 public ipv4 ip 주소와 donvhostest.com를 적어줍니다.
-![이미지2](/img/그림4.png)
+
+    54.180.145.184 donvhostest.com
 
 donvhostest.com 디렉터리에 간단한 html 화면을 만들어 줍니다.
 
