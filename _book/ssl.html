@@ -1,0 +1,488 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ssl · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="virtual.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    git 3번째 과제
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="mark.html">
+            
+                <a href="mark.html">
+            
+                    
+                    MarkDown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    AWS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="swap.html">
+            
+                <a href="swap.html">
+            
+                    
+                    swap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="vi.html">
+            
+                <a href="vi.html">
+            
+                    
+                    vi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="yum.html">
+            
+                <a href="yum.html">
+            
+                    
+                    yum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="install.html">
+            
+                <a href="install.html">
+            
+                    
+                    install
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Apache
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="httpd.html">
+            
+                <a href="httpd.html">
+            
+                    
+                    httpd.conf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="virtual.html">
+            
+                <a href="virtual.html">
+            
+                    
+                    virtual host
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.3" data-path="ssl.html">
+            
+                <a href="ssl.html">
+            
+                    
+                    ssl
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >ssl</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="ssl-&#xBAA8;&#xB4C8;-&#xC124;&#xCE58;-&#xBC0F;-&#xD658;&#xACBD;&#xC124;&#xC815;-letsencrypt-&#xC778;&#xC99D;&#xC11C;-&#xC124;&#xCE58;">SSL &#xBAA8;&#xB4C8; &#xC124;&#xCE58; &#xBC0F; &#xD658;&#xACBD;&#xC124;&#xC815;, Letsencrypt &#xC778;&#xC99D;&#xC11C; &#xC124;&#xCE58;</h1>
+<h2 id="1-ssl-&#xBAA8;&#xB4C8;-&#xC124;&#xCE58;-&#xBC0F;-&#xD658;&#xACBD;&#xC124;&#xC815;">1. SSL &#xBAA8;&#xB4C8; &#xC124;&#xCE58; &#xBC0F; &#xD658;&#xACBD;&#xC124;&#xC815;</h2>
+<pre><code>$ sudo systemctl start httpd &amp;&amp; sudo systemctl enable httpd
+</code></pre><p>Apache&#xB97C; &#xC2DC;&#xC791;&#xD55C; &#xB2E4;&#xC74C; &#xC2DC;&#xC2A4;&#xD15C; &#xBD80;&#xD305;&#xC2DC; &#xB9C8;&#xB2E4; &#xC2DC;&#xC791;&#xD558;&#xB3C4;&#xB85D; &#xC124;&#xC815;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code>$ sudo yum update -y
+$ sudo yum install -y mod_ssl
+</code></pre><p>&#xBAA8;&#xB4E0; &#xC18C;&#xD504;&#xD2B8;&#xC6E8;&#xC5B4; &#xD328;&#xD0A4;&#xC9C0;&#xAC00; &#xCD5C;&#xC2E0; &#xC0C1;&#xD0DC;&#xB85C; &#xC5C5;&#xB370;&#xC774;&#xD2B8; &#xD569;&#xB2C8;&#xB2E4;. &#xADF8;&#xB9AC;&#xACE0; Apache module (mod_ssl)&#xC744; &#xC124;&#xCE58;&#xD558;&#xC5EC; TLS&#xC9C0;&#xC6D0;&#xC744; &#xCD94;&#xAC00;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>/etc/httpd/conf.d/ssl.conf : mod_ssl&#xC758; &#xAD6C;&#xC131; &#xD30C;&#xC77C;, Apache&#xC5D0; &#xC554;&#xD638;&#xD654; &#xD0A4; &#xBC0F; &#xC778;&#xC99D;&#xC11C;&#xC758; &#xC704;&#xCE58;, &#xD5C8;&#xC6A9;&#xD558;&#xB294; TLS &#xD504;&#xB85C;&#xD1A0;&#xCF5C; &#xBC84;&#xC804;, &#xD5C8;&#xC6A9;&#xD558;&#xB294; &#xC554;&#xD638;&#xD654; &#xC554;&#xD638;&#xB97C; &#xC54C;&#xB824;&#xC8FC;&#xB294; &#xBA85;&#xB839;&#xC774; &#xD3EC;&#xD568;&#xB418;&#xC5B4; &#xC788;&#xB2E4;.</p>
+<pre><code>$ cd /etc/pki/tls/certs
+$ sudo ./make-dummy-cert localhost.crt
+</code></pre><p>&#xC790;&#xCCB4; &#xC11C;&#xBA85;&#xB41C; &#xC778;&#xC99D;&#xC11C;&#xC640; &#xD0A4;&#xB97C; &#xC0DD;&#xC131;&#xD569;&#xB2C8;&#xB2E4;. localhost.crt &#xD30C;&#xC77C;&#xC774; /etc/pki/tls/certs &#xC5D0; &#xC0DD;&#xC131; &#xB429;&#xB2C8;&#xB2E4;. 
+&#xC790;&#xCCB4; &#xC11C;&#xBA85;&#xB41C; &#xC778;&#xC99D;&#xC11C;&#xC5D0;&#xB3C4; &#xD0A4;&#xAC00; &#xD3EC;&#xD568; &#xB418;&#xC5B4; &#xC788;&#xC5B4;&#xC11C; /etc/httpd/conf.d/ssl.conf &#xD30C;&#xC77C;&#xC744; &#xC5F4;&#xC5B4;&#xC11C; SSLCertificateKeyFile &#xBD80;&#xBD84;&#xC744; &#xC8FC;&#xC11D;&#xCC98;&#xB9AC; &#xD569;&#xB2C8;&#xB2E4;.
+&#xC8FC;&#xC11D;&#xCC98;&#xB9AC;&#xB97C; &#xD558;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; Apache &#xC11C;&#xBE44;&#xC2A4;&#xAC00; &#xC2DC;&#xC791;&#xB418;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code>$ sudo apachectl restart
+</code></pre><p>&#xC544;&#xD30C;&#xCE58; &#xC11C;&#xBC84;&#xB97C; &#xC7AC;&#xC2DC;&#xC791;&#xD558;&#xACE0; https:// &#xC8FC;&#xC18C;&#xB85C; &#xC811;&#xC18D;&#xC774; &#xAC00;&#xB2A5;&#xD558;&#xBA74; &#xC131;&#xACF5;&#xC785;&#xB2C8;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC; &#xC2E0;&#xB8B0;&#xD560; &#xC218; &#xC5C6;&#xB294; &#xC790;&#xCCB4; &#xC11C;&#xBA85;&#xB41C; &#xD638;&#xC2A4;&#xD2B8; &#xC778;&#xC99D;&#xC11C;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xC0AC;&#xC774;&#xD2B8;&#xC5D0; &#xC5F0;&#xACB0;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xC5D0; &#xBCF4;&#xC548; &#xACBD;&#xACE0;&#xAC00; &#xC5F0;&#xC18D;&#xC73C;&#xB85C; &#xD45C;&#xC2DC; &#xB420; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<h2 id="2-letsencrypt">2. letsencrypt</h2>
+<pre><code>$ sudo yum-config-manager --enable epel*
+$ sudo yum repolist all
+</code></pre><p>epel package&#xB97C; &#xC0AC;&#xC6A9; &#xAC00;&#xB2A5;&#xD55C; &#xC0C1;&#xD0DC;&#xB85C; &#xB9CC;&#xB4E4;&#xACE0; epel&#xC774; &#xD65C;&#xC131;&#xD654; &#xB418;&#xC5C8;&#xB294;&#xC9C0; &#xD655;&#xC778; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code>&lt;VirtualHost *:80&gt;
+    DocumentRoot &quot;/var/www/html&quot;
+    ServerName &quot;malgnigd.ze.to&quot;
+    ServerAlias &quot;www.malgnigd.ze.to&quot;
+&lt;/VirtualHost&gt;
+</code></pre><p>httpd.conf &#xC5D0; &#xCD94;&#xAC00;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code>$ sudo apachectl restart
+</code></pre><p>&#xC544;&#xD30C;&#xCE58;&#xB97C; &#xC7AC;&#xC2DC;&#xC791; &#xD574;&#xC90D;&#xB2C8;&#xB2E4;.</p>
+<h4 id="certbot-&#xC124;&#xCE58;-&#xBC0F;-&#xC778;&#xC99D;&#xC11C;-&#xBC1C;&#xAE09;-&#xBC1B;&#xAE30;">Certbot &#xC124;&#xCE58; &#xBC0F; &#xC778;&#xC99D;&#xC11C; &#xBC1C;&#xAE09; &#xBC1B;&#xAE30;</h4>
+<pre><code>$ sudo amazon-linux-extras install epel -y
+</code></pre><p>epel&#xC6A9; Amazon Extras &#xC800;&#xC7A5;&#xC18C;&#xB97C; &#xC124;&#xCE58;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code>$ sudo yum install -y certbot python2-certbot-apache
+</code></pre><p>Certbot &#xD328;&#xD0A4;&#xC9C0; &#xBC0F; &#xC885;&#xC18D;&#xC131;&#xC744; &#xC124;&#xCE58;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code>$ sudo certbot --webroot --installer apache -w /var/www/html/ -d malgnigd.ze.to
+</code></pre><p>webroot &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xC9C4;&#xD589; &#xD588;&#xC744; &#xACBD;&#xC6B0;&#xC5D0; &#xB3C4;&#xBA54;&#xC778; &#xC778;&#xC99D;&#xC744; &#xC704;&#xD574; &#xC678;&#xBD80;&#xC5D0;&#xC11C; &#xC811;&#xADFC; &#xAC00;&#xB2A5;&#xD55C; &#xACBD;&#xB85C;&#xB97C; &#xC81C;&#xACF5;&#xD558;&#xACE0;, let&apos;s Encrypt &#xC5D0;&#xC11C; &#xD574;&#xB2F9; &#xACBD;&#xB85C;&#xB85C; &#xC811;&#xC18D;&#xD574; &#xC778;&#xC99D;&#xC744; &#xD558;&#xB294; &#xBC29;&#xC2DD;&#xC785;&#xB2C8;&#xB2E4;.
+standalone&#xBC29;&#xC2DD;&#xACFC; &#xB2E4;&#xB974;&#xAC8C; &#xC11C;&#xBE44;&#xC2A4; &#xC885;&#xB8CC;&#xB294; &#xD558;&#xC9C0; &#xC54A;&#xC544;&#xB3C4; &#xB429;&#xB2C8;&#xB2E4;.(&#xC11C;&#xBC84;&#xB97C; &#xB0B4;&#xB824;&#xC57C; &#xD558;&#xB294; &#xBB38;&#xC81C;&#xB97C; &#xD574;&#xACB0;&#xD558;&#xAE30; &#xC704;&#xD574; Webroot &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xC9C4;&#xD589;&#xD55C;&#xB2E4;.)</p>
+<pre><code>&lt;VirtualHost *:80&gt;
+    ...
+    RewriteEngine on
+    RewriteCond %{SERVER_NAME} =malgnigd.ze.to [OR]
+    RewriteCond %{SERVER_NAME} =www.malgnigd.ze.to
+    RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+&lt;/VirtualHost&gt;
+</code></pre><p>http://&#xB85C; &#xC811;&#xC18D;&#xC2DC; https://&#xB85C; &#xB9AC;&#xB2E4;&#xC774;&#xB809;&#xD2B8; &#xD574;&#xC8FC;&#xB294; &#xB0B4;&#xC6A9;&#xC774; &#xCD94;&#xAC00; &#xB429;&#xB2C8;&#xB2E4;.</p>
+<pre><code>&lt;IfModule mod_ssl.c&gt;
+&lt;VirtualHost *:443&gt;
+    ServerName     &quot; malgnigd.ze.to&quot;
+    DocumentRoot    &quot;/var/www/html&quot;
+    ServerAlias &quot;www.malgnigd.ze.to&quot;
+RewriteEngine on
+
+SSLCertificateFile /etc/letsencrypt/live/malgnigd.ze.to/fullchain.pem
+SSLCertificateKeyFile /etc/letsencrypt/live/malgnigd.ze.to/privkey.pem
+Include /etc/letsencrypt/options-ssl-apache.conf
+&lt;/VirtualHost&gt;
+&lt;/IfModule&gt;
+</code></pre><p>&#xADF8;&#xB9AC;&#xACE0; /etc/httpd/conf/httpd-le-ssl.conf &#xB97C; &#xC0DD;&#xC131;&#xD558;&#xACE0; httpd.conf&#xC5D0;&#xC11C; Include &#xD558;&#xAC8C; &#xB429;&#xB2C8;&#xB2E4;.
+ 443&#xC5D0; &#xB300;&#xD55C; &#xAC00;&#xC0C1;&#xD638;&#xC2A4;&#xD2B8;&#xB97C; &#xC124;&#xC815;&#xD558;&#xACE0;, &#xC778;&#xC99D;&#xC11C; &#xD30C;&#xC77C; &#xACBD;&#xB85C;&#xB97C; &#xC9C0;&#xC815;&#xD574;&#xC900;&#xB2E4;.</p>
+<h4 id="&#xBC1C;&#xAE09;">&#xBC1C;&#xAE09;</h4>
+<p>&#xADF8;&#xB7EC;&#xBA74; &#xC544;&#xB798;&#xC758; &#xD654;&#xBA74; &#xCC98;&#xB7FC; &#xC778;&#xC99D;&#xC11C; &#xBC1C;&#xAE09;&#xC774; &#xC815;&#xC0C1;&#xC801;&#xC73C;&#xB85C; &#xB41C; &#xAC83;&#xC744; &#xD655;&#xC778; &#xD560;&#xC218; &#xC788;&#xB2E4;.
+<img src="img/&#xADF8;&#xB9BC;5.png" alt="&#xC774;&#xBBF8;&#xC9C0;1"></p>
+<h2 id="confdsslconf">conf.d/ssl.conf</h2>
+<pre><code>Listen 443 https
+
+SSLPassPhraseDialog exec:/usr/libexec/httpd-ssl-pass-dialog
+</code></pre><p>Apache&#xAC00; &#xC2DC;&#xB3D9;&#xB420; &#xB54C; SSL&#xC774; &#xC801;&#xC6A9;&#xB41C; &#xAC01; virtualhost&#xC5D0; &#xB300;&#xD55C; Certificate&#xC640; Private Key&#xB97C; &#xC77D;&#xC5B4;&#xC635;&#xB2C8;&#xB2E4;. &#xBCF4;&#xC548;&#xC744; &#xC704;&#xD574;&#xC11C; Private Key&#xB4E4;&#xC740; &#xC554;&#xD638;&#xD654;&#xB418;&#xC5B4; &#xC788;&#xC73C;&#xBA70;, &#xB530;&#xB77C;&#xC11C; mod_ssl&#xC740; &#xAD00;&#xB9AC;&#xC790;&#xC5D0;&#xAC8C; &#xC554;&#xD638;&#xD654;&#xB41C; PrivateKey&#xB97C; &#xBCF5;&#xD638;&#xD654;&#xD558;&#xAE30; &#xC704;&#xD574;&#xC11C; Pass Phrase&#xB97C; &#xC694;&#xAD6C;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code>SSLSessionCache         shmcb:/run/httpd/sslcache(512000)
+</code></pre><p>global/inter-process SSL Session Cache&#xC758; storage type&#xC744; &#xC9C0;&#xC815;&#xD558;&#xBA70;, &#xC774; cache&#xB294; &#xBCD1;&#xB82C;&#xC801;&#xC778; &#xC694;&#xCCAD; &#xD504;&#xB85C;&#xC138;&#xC2A4;(parallel request processing)&#xC758; &#xC18D;&#xB3C4;&#xB97C; &#xAC1C;&#xC120;&#xD574;&#xC8FC;&#xB294; &#xC5ED;&#xD560;&#xC744; &#xD55C;&#xB2E4;.</p>
+<pre><code>SSLSessionCacheTimeout  300
+</code></pre><p>SSL Session Cache&#xC640; SSLeay internal memory cache&#xC5D0; &#xC800;&#xC7A5;&#xB41C; &#xC815;&#xBCF4;&#xB4E4;&#xC5D0; &#xB300;&#xD55C; timeout&#xC744; &#xCD08;&#xB2E8;&#xC704;&#xB85C; &#xC9C0;&#xC815;&#xD55C;&#xB2E4;. &#xC124;&#xC815; &#xAC12;&#xC740; &#xCD5C;&#xC800; 15&#xCD08;&#xC774;&#xBA70; &#xC2E4;&#xC81C;&#xB85C; &#xC2E4;&#xD589;&#xB420; &#xC11C;&#xBC84;&#xC5D0;&#xC11C;&#xB294; &#xBCF4;&#xD1B5; 300&#xCD08; &#xC774;&#xC0C1;&#xC744; &#xC9C0;&#xC815;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code>SSLRandomSeed startup file:/dev/urandom  256
+SSLRandomSeed connect builtin
+</code></pre><p>&#xC11C;&#xBC84;&#xAC00; &#xC2DC;&#xB3D9;&#xD560; &#xB54C;(context&#xAC00; startup&#xC778; &#xACBD;&#xC6B0;) &#xD639;&#xC740; &#xC0C8;&#xB85C;&#xC6B4; SSL &#xC5F0;&#xACB0;&#xC774; &#xC774;&#xB8E8;&#xC5B4;&#xC9C8; &#xB54C; SSLeay&#xC758; Pseudo Random Number Generator(PRNG)&#xC758; seeding&#xC744; &#xC704;&#xD55C; &#xD558;&#xB098; &#xD639;&#xC740; &#xADF8; &#xC774;&#xC0C1;&#xC758; seed source&#xB97C; &#xC124;&#xC815;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code>SSLCryptoDevice builtin
+
+
+&lt;VirtualHost _default_:443&gt;
+    ErrorLog logs/ssl_error_log
+    TransferLog logs/ssl_access_log
+    LogLevel warn
+
+    SSLEngine on
+
+    SSLProtocol all -SSLv3
+
+    SSLCipherSuite HIGH:MEDIUM:!aNULL:!MD5:!SEED:!IDEA
+
+    SSLCertificateFile /etc/pki/tls/certs/localhost.crt
+
+
+    &lt;Files ~ &quot;\.(cgi|shtml|phtml|php3?)$&quot;&gt;
+        SSLOptions +StdEnvVars
+    &lt;/Files&gt;
+    &lt;Directory &quot;/var/www/cgi-bin&quot;&gt;
+        SSLOptions +StdEnvVars
+    &lt;/Directory&gt;
+
+    BrowserMatch &quot;MSIE [2-5]&quot; \
+         nokeepalive ssl-unclean-shutdown \
+         downgrade-1.0 force-response-1.0
+
+    CustomLog logs/ssl_request_log \
+    &quot;%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \&quot;%r\&quot; %b&quot;
+
+&lt;/VirtualHost&gt;                                  
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="virtual.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: virtual host">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ssl","level":"1.5.3","depth":2,"previous":{"title":"virtual host","level":"1.5.2","depth":2,"path":"virtual.md","ref":"virtual.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ssl.md","mtime":"2022-08-24T08:23:25.496Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-24T08:24:04.590Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
