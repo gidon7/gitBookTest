@@ -96,10 +96,10 @@ http://로 접속시 https://로 리다이렉트 해주는 내용이 추가 됩�
 
 	SSLPassPhraseDialog exec:/usr/libexec/httpd-ssl-pass-dialog
 
-Apache가 시동될 때 SSL이 적용된 각 virtualhost에 대한 Certificate와 Private Key를 읽어옵니다. 보안을 위해서 Private Key들은 암호화되어 있으며, 따라서 mod_ssl은 관리자에게 암호화된 PrivateKey를 복호화하기 위해서 Pass Phrase를 요구합니다.
+암호화된 개인 키에 대한 암호 구문 대화 상자 타입
 
 	SSLSessionCache         shmcb:/run/httpd/sslcache(512000)
-global/inter-process SSL Session Cache의 storage type을 지정하며, 이 cache는 병렬적인 요청 프로세스(parallel request processing)의 속도를 개선해주는 역할을 한다.
+서버 프로세스의 로컬 OpenSSL 메모리 캐시를 동기화하기 위해 RAM의 공유 메모리 세그먼트 내부의 고성능 순환 버퍼를 사용합니다.
 
 	SSLSessionCacheTimeout  300
 
