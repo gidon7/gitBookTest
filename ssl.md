@@ -93,7 +93,6 @@ http://로 접속시 https://로 리다이렉트 해주는 내용이 추가 됩�
 
 ## conf.d/ssl.conf
 
-	Listen 443 https
 
 	SSLPassPhraseDialog exec:/usr/libexec/httpd-ssl-pass-dialog
 
@@ -113,33 +112,42 @@ SSL Session Cache와 SSLeay internal memory cache에 저장된 정보들에 대�
 
 	SSLCryptoDevice builtin
 
+ssl 처리 오버헤드의 일부를 줄일 수 있다.
 
-	<VirtualHost _default_:443>
-		ErrorLog logs/ssl_error_log
-		TransferLog logs/ssl_access_log
-		LogLevel warn
-		
-		SSLEngine on
+	ErrorLog logs/ssl_error_log
+	TransferLog logs/ssl_access_log
+	LogLevel warn
+	
+	SSLEngine on
 
-		SSLProtocol all -SSLv3
+SSL/TLS 프로토콜 엔진의 사용을 토글합니다.
 
-		SSLCipherSuite HIGH:MEDIUM:!aNULL:!MD5:!SEED:!IDEA
+	SSLProtocol all -SSLv3
 
-		SSLCertificateFile /etc/pki/tls/certs/localhost.crt
+Netscape Corporation의 SSL(Secure Sockets Layer) 프로토콜 버전 3.0입니다.
+
+	SSLCipherSuite HIGH:MEDIUM:!aNULL:!MD5:!SEED:!IDEA
+
+OpenSSL 암호 사양으로 구성된 콜론으로 구분된 암호 사양 문자열을 사용하여 클라이언트가 SSL 핸드셰이크 단계에서 협상할 수 있는 암호 제품군을 구성합니다.
+
+	SSLCertificateFile /etc/pki/tls/certs/localhost.crt
+PEM 형식의 인증서 데이터 또는 구성된 암호화 토큰을 통한 인증서 식별자가 있는 파일을 가리킵니다.
 
 
-		<Files ~ "\.(cgi|shtml|phtml|php3?)$">
-			SSLOptions +StdEnvVars
-		</Files>
-		<Directory "/var/www/cgi-bin">
-			SSLOptions +StdEnvVars
-		</Directory>
+	<Files ~ "\.(cgi|shtml|phtml|php3?)$">
+		SSLOptions +StdEnvVars
+	</Files>
+디렉토리별로 다양한 런타임 옵션을 제어하는 ​​데 사용할 수 있습니다. 
 
-		BrowserMatch "MSIE [2-5]" \
-         	nokeepalive ssl-unclean-shutdown \
-         	downgrade-1.0 force-response-1.0
+	<Directory "/var/www/cgi-bin">
+		SSLOptions +StdEnvVars
+	</Directory>
 
-		CustomLog logs/ssl_request_log \
-		"%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b"
+	BrowserMatch "MSIE [2-5]" \
+		nokeepalive ssl-unclean-shutdown \
+		downgrade-1.0 force-response-1.0
 
-	</VirtualHost>                                  
+	CustomLog logs/ssl_request_log \
+	"%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b"
+
+                                
