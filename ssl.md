@@ -143,11 +143,18 @@ PEM 형식의 인증서 데이터 또는 구성된 암호화 토큰을 통한 �
 		SSLOptions +StdEnvVars
 	</Directory>
 
+/var/www/cgi-bin 에 SSLOptions 활성시킨다. 
+
+
 	BrowserMatch "MSIE [2-5]" \
 		nokeepalive ssl-unclean-shutdown \
 		downgrade-1.0 force-response-1.0
 
+구형 IE에서 발생하는 오류 처리하기 위한 설정, IE 2-5 브라우저에 대해서 http 프로토콜을 이요한 지속적인 연결을 무시한다.
+
 	CustomLog logs/ssl_request_log \
 	"%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b"
+
+사용자 정의 ssl 로그 파일의 홈, 가상 호스트 기반의 오류 없는 ssl 로그 파일을 압축한다.
 
                                 
