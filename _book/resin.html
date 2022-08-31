@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>virtual host · GitBook</title>
+        <title>연동 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,6 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="ssl.html" />
-    
-    
-    <link rel="prev" href="httpd.html" />
     
 
     </head>
@@ -232,7 +228,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.2" data-path="virtual.html">
+        <li class="chapter " data-level="1.5.2" data-path="virtual.html">
             
                 <a href="virtual.html">
             
@@ -251,6 +247,38 @@
             
                     
                     ssl
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    resin and apache
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.6.1" data-path="resin.html">
+            
+                <a href="resin.html">
+            
+                    
+                    연동
             
                 </a>
             
@@ -293,7 +321,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >virtual host</a>
+        <a href="." >연동</a>
     </h1>
 </div>
 
@@ -308,29 +336,38 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="virtual-host">Virtual host</h1>
-<h2 id="1-virtual-host">1. Virtual host?</h2>
-<p>&#xAC00;&#xC0C1; &#xD638;&#xC2A4;&#xD2B8; &#xC11C;&#xBC84;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xC81C;&#xD55C;&#xB41C; &#xACF5;&#xAC04; &#xC548;&#xC5D0;&#xC11C; &#xC5EC;&#xB7EC; &#xAC1C;&#xC758; &#xD648;&#xD398;&#xC774;&#xC9C0;&#xB97C; &#xC81C;&#xACF5;&#xD574;&#xC8FC;&#xB294; &#xC11C;&#xBE44;&#xC2A4;&#xAC00; (&#xC6F9;, &#xBA54;&#xC77C; &#xB4F1;) &#xD638;&#xC2A4;&#xD305; &#xC11C;&#xBE44;&#xC2A4; &#xC785;&#xB2C8;&#xB2E4;.</p>
-<h2 id="2-virtual-host-&#xC124;&#xC815;">2. Virtual host &#xC124;&#xC815;</h2>
-<p>/etc/httpd/conf/httpd.conf &#xC5D0;&#xC11C; 
-virtual host &#xD0DC;&#xADF8;&#xB97C; &#xB123;&#xC5B4; &#xC815;&#xC758; &#xD569;&#xB2C8;&#xB2E4;.</p>
-<pre><code>&lt;VirtualHost *:80&gt;
-    ServerName      donvhostest.com
-    ServerAdmin     igd@malgnsoft.com
-    DocumentRoot    &quot;/var/www/html/test&quot;
-    &lt;Directory &quot;/var/www/html/test&quot;&gt;
-        AllowOverride All
-    &lt;/Directory&gt;
-&lt;/VirtualHost&gt;
-</code></pre><h2 id="2-1">2-1.</h2>
-<p>AWS &#xC5D0;&#xC11C; 80 port&#xC5D0; &#xB300;&#xD55C; &#xC778;&#xBC14;&#xC6B4;&#xB4DC; &#xBCF4;&#xC548; &#xADDC;&#xCE59;&#xC744; &#xC124;&#xC815;&#xD569;&#xB2C8;&#xB2E4;.
-<img src="img/&#xADF8;&#xB9BC;2.png" alt="&#xC774;&#xBBF8;&#xC9C0;1"></p>
-<p>Windows/System32/Drivers/etc/hosts &#xC5D0; aws&#xC758; public ipv4 ip &#xC8FC;&#xC18C;&#xC640; donvhostest.com&#xB97C; &#xC801;&#xC5B4;&#xC90D;&#xB2C8;&#xB2E4;.</p>
-<pre><code>54.180.145.184 donvhostest.com
-</code></pre><p>donvhostest.com &#xB514;&#xB809;&#xD130;&#xB9AC;&#xC5D0; &#xAC04;&#xB2E8;&#xD55C; html &#xD654;&#xBA74;&#xC744; &#xB9CC;&#xB4E4;&#xC5B4; &#xC90D;&#xB2C8;&#xB2E4;.</p>
-<p>&#xADF8; &#xB2E4;&#xC74C; &#xC811;&#xC18D; &#xD588;&#xC744; &#xB54C; &#xD654;&#xBA74;&#xC740; &#xC544;&#xB798;&#xC758; &#xADF8;&#xB9BC; &#xACFC; &#xAC19;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p><img src="img/&#xADF8;&#xB9BC;3.png" alt="&#xC774;&#xBBF8;&#xC9C0;3"></p>
-<p>&#xC67C;&#xCABD;&#xC740; &#xC544;&#xC774;&#xD53C; &#xC8FC;&#xC18C;&#xB85C; &#xC811;&#xC18D; &#xD588;&#xACE0;, &#xC624;&#xB978;&#xCABD;&#xC740; &#xB3C4;&#xBA54;&#xC778; &#xC8FC;&#xC18C;&#xB85C; &#xC811;&#xC18D; &#xD588;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+                                <h1 id="&#xC544;&#xD30C;&#xCE58;-&#xB808;&#xC9C4;-&#xC5F0;&#xB3D9;">&#xC544;&#xD30C;&#xCE58; &#xB808;&#xC9C4; &#xC5F0;&#xB3D9;</h1>
+<h3 id="&#xC544;&#xD30C;&#xCE58;-&#xCEF4;&#xD30C;&#xC77C;">&#xC544;&#xD30C;&#xCE58; &#xCEF4;&#xD30C;&#xC77C;</h3>
+<pre><code>yum install httpd-devel
+</code></pre><p>apxs &#xC124;&#xCE58; &#xACBD;&#xB85C;&#xB97C; &#xCC3E;&#xC544;&#xC900;&#xB2E4;.</p>
+<pre><code>whereis apxs
+</code></pre><p>&#xADF8;&#xB9AC;&#xACE0; apxs &#xACBD;&#xB85C;&#xB97C; configure &#xD560;&#xB54C; &#xB123;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code>./configure --with-apxs=/usr/bin/apxs
+</code></pre><p>&#xC704; &#xBA85;&#xB839;&#xC5B4;&#xB97C; &#xC2E4;&#xD589; &#xC2DC;&#xCF1C;&#xC90D;&#xB2C8;&#xB2E4;.</p>
+<pre><code>make 
+make install
+</code></pre><p>&#xB2E4;&#xC74C;&#xC73C;&#xB85C; </p>
+<pre><code>ps aux | grep resin
+</code></pre><p>&#xB808;&#xC9C4;&#xC774; &#xC791;&#xB3D9;&#xD558;&#xB294;&#xC9C0; &#xD655;&#xC778; &#xD558;&#xACE0;
+&#xB808;&#xC9C4;&#xC774; &#xC791;&#xB3D9;&#xD558;&#xC9C0; &#xC54A;&#xB294; &#xB2E4;&#xBA74; resin.sh &#xAC00; &#xC788;&#xB294; &#xACBD;&#xB85C;&#xB97C; &#xCC3E;&#xC544;&#xC11C; &#xB808;&#xC9C4;&#xC744; &#xC2E4;&#xD589;&#xC2DC;&#xCF1C;&#xC90D;&#xB2C8;&#xB2E4;.</p>
+<pre><code>sh resin.sh start
+</code></pre><h3 id="resinxml-&#xC218;&#xC815;">resin.xml &#xC218;&#xC815;</h3>
+<pre><code>&lt;host id=&quot;&quot; root-directory=&quot;.&quot;&gt;
+  &lt;!--
+     - webapps can be overridden/extended in the resin.xml
+    --&gt;
+     &lt;!-- &lt;web-app id=&quot;/&quot; root-directory=&quot;webapps/ROOT&quot;/&gt;--&gt;
+     &lt;web-app id=&quot;/&quot; document-directory=&quot;/var/www/html&quot;/&gt;
+
+&lt;/host&gt;
+</code></pre><p>apache&#xC758; document &#xB514;&#xB809;&#xD130;&#xB9AC; &#xACBD;&#xB85C;&#xB97C; &#xC124;&#xC815;&#xD574;&#xC90D;&#xB2C8;&#xB2E4;.
+&#xB2E4;&#xC74C;&#xC73C;&#xB85C; resin.sh &#xACBD;&#xB85C;&#xC5D0;&#xC11C; resin.sh &#xB97C; &#xC2DC;&#xC791;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code>sh resin.sh start
+</code></pre><p>/var/www/html &#xC544;&#xB798;&#xC5D0; dondon.jsp&#xB97C; &#xB9CC;&#xB4E4;&#xACE0; &#xC544;&#xB798;&#xC758; &#xB0B4;&#xC6A9;&#xC744; &#xB123;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code>&lt;%@ page contentType=&quot;text/html; charset=utf-8&quot; %&gt;
+&lt;%out.println(&quot;&#xB300;&#xD45C;&#xB2D8; &#xC800;&#xB791; &#xBBFC;&#xC774;&#xD615;&#xC740; &#xD654;&#xBA74; &#xB098;&#xC624;&#xB294;&#xAC70; &#xAE4C;&#xC9C0;&#xB294; &#xC644;&#xB8CC;&#xD588;&#xC2B5;&#xB2C8;&#xB2E4;!&quot;);%&gt;
+</code></pre><p>malgnigd.ze.to/dondon.jsp &#xC5D0;&#xC11C; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xCD9C;&#xB825;&#xB418;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;.</p>
+<p><img src="img/&#xADF8;&#xB9BC;7.png" alt="&#xC774;&#xBBF8;&#xC9C0;1"></p>
 
                                 
                                 </section>
@@ -358,14 +395,6 @@ virtual host &#xD0DC;&#xADF8;&#xB97C; &#xB123;&#xC5B4; &#xC815;&#xC758; &#xD569;
 
             
                 
-                <a href="httpd.html" class="navigation navigation-prev " aria-label="Previous page: httpd.conf">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="ssl.html" class="navigation navigation-next " aria-label="Next page: ssl">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -374,7 +403,7 @@ virtual host &#xD0DC;&#xADF8;&#xB97C; &#xB123;&#xC5B4; &#xC815;&#xC758; &#xD569;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"virtual host","level":"1.5.2","depth":2,"next":{"title":"ssl","level":"1.5.3","depth":2,"path":"ssl.md","ref":"ssl.md","articles":[]},"previous":{"title":"httpd.conf","level":"1.5.1","depth":2,"path":"httpd.md","ref":"httpd.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"virtual.md","mtime":"2022-08-23T02:59:34.092Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-31T13:38:04.455Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"연동","level":"1.6.1","depth":2,"previous":{"title":"resin and apache","level":"1.6","depth":1,"ref":"","articles":[{"title":"연동","level":"1.6.1","depth":2,"path":"resin.md","ref":"resin.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resin.md","mtime":"2022-08-31T13:48:11.935Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-31T13:49:54.124Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
