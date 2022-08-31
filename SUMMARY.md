@@ -1,6 +1,5 @@
 # Summary
 
-* [git 3번째 과제](README.md)
 * [MarkDown](mark.md)
 * [AWS]()
     * [swap](swap.md)
