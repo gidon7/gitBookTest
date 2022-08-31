@@ -397,14 +397,15 @@ SSLEngine on
 <pre><code>&lt;Directory &quot;/var/www/cgi-bin&quot;&gt;
     SSLOptions +StdEnvVars
 &lt;/Directory&gt;
-
-BrowserMatch &quot;MSIE [2-5]&quot; \
+</code></pre><p>/var/www/cgi-bin &#xC5D0; SSLOptions &#xD65C;&#xC131;&#xC2DC;&#xD0A8;&#xB2E4;. </p>
+<pre><code>BrowserMatch &quot;MSIE [2-5]&quot; \
     nokeepalive ssl-unclean-shutdown \
     downgrade-1.0 force-response-1.0
-
-CustomLog logs/ssl_request_log \
+</code></pre><p>&#xAD6C;&#xD615; IE&#xC5D0;&#xC11C; &#xBC1C;&#xC0DD;&#xD558;&#xB294; &#xC624;&#xB958; &#xCC98;&#xB9AC;&#xD558;&#xAE30; &#xC704;&#xD55C; &#xC124;&#xC815;, IE 2-5 &#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xC5D0; &#xB300;&#xD574;&#xC11C; http &#xD504;&#xB85C;&#xD1A0;&#xCF5C;&#xC744; &#xC774;&#xC694;&#xD55C; &#xC9C0;&#xC18D;&#xC801;&#xC778; &#xC5F0;&#xACB0;&#xC744; &#xBB34;&#xC2DC;&#xD55C;&#xB2E4;.</p>
+<pre><code>CustomLog logs/ssl_request_log \
 &quot;%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \&quot;%r\&quot; %b&quot;
-</code></pre>
+</code></pre><p>&#xC0AC;&#xC6A9;&#xC790; &#xC815;&#xC758; ssl &#xB85C;&#xADF8; &#xD30C;&#xC77C;&#xC758; &#xD648;, &#xAC00;&#xC0C1; &#xD638;&#xC2A4;&#xD2B8; &#xAE30;&#xBC18;&#xC758; &#xC624;&#xB958; &#xC5C6;&#xB294; ssl &#xB85C;&#xADF8; &#xD30C;&#xC77C;&#xC744; &#xC555;&#xCD95;&#xD55C;&#xB2E4;.</p>
+
                                 
                                 </section>
                             
@@ -443,7 +444,7 @@ CustomLog logs/ssl_request_log \
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ssl","level":"1.5.3","depth":2,"previous":{"title":"virtual host","level":"1.5.2","depth":2,"path":"virtual.md","ref":"virtual.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ssl.md","mtime":"2022-08-24T12:06:50.064Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-24T12:06:57.733Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ssl","level":"1.5.3","depth":2,"previous":{"title":"virtual host","level":"1.5.2","depth":2,"path":"virtual.md","ref":"virtual.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ssl.md","mtime":"2022-08-29T09:01:55.539Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-29T09:02:33.463Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
